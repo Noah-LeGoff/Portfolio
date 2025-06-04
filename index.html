@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Noah Le Goff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Portfolio Noah Le Goff</h1>
+    <nav>
+      <ul>
+        <li><a href="#projets">Mes Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="./download/CV.pdf" download>Mon CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="presentation">
+      <img src="./images/photoNoah.jpg" alt="Photo de moi">
+      <div class="texte">
+        <h2>Qui suis-je ?</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. 
+          Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+        </p>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Mes Projets</h2>
+      <div class="carousel">
+        <div class="projets-container" id="carousel-container">
+          <!-- Cartes de projet -->
+          <div class="projet">
+            <img src="https://via.placeholder.com/300x200" alt="Projet 1">
+            <h3>Projet 1</h3>
+            <p>Description rapide du projet 1.</p>
+          </div>
+          <div class="projet">
+            <img src="https://via.placeholder.com/300x200" alt="Projet 2">
+            <h3>Projet 2</h3>
+            <p>Description rapide du projet 2.</p>
+          </div>
+          <div class="projet">
+            <img src="https://via.placeholder.com/300x200" alt="Projet 3">
+            <h3>Projet 3</h3>
+            <p>Description rapide du projet 3.</p>
+          </div>
+        </div>
+        <button class="carousel-btn right" onclick="nextSlide()">→</button>
+        <button class="carousel-btn left" onclick="prevSlide()">←</button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email : noah.legoff@example.com</p>
+      <p>Téléphone : 06 12 34 56 78</p>
+      <p>École : IUT de Lannion</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.493019831075!2d-3.456185684341971!3d48.7334257792778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4812116484f25ce1%3A0x23e376b8aef25327!2sIUT%20de%20Lannion!5e0!3m2!1sfr!2sfr!4v1715587597809!5m2!1sfr!2sfr" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Noah Le Goff - Étudiant à l’IUT de Lannion</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
