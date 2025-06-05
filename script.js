@@ -8,25 +8,24 @@ const projectsData = {
       "Contrôles au clavier avec les touches directionnelles",
       "Mode automatique avec intelligence artificielle basique",
       "Gestion des collisions et du score",
-      "Interface utilisateur en mode texte optimisée",
       "Code structuré et modulaire en C"
     ],
-    technologies: ["C", "Terminal", "Makefile"],
-    challenges: "Le principal défi était de gérer l'affichage en temps réel dans le terminal tout en maintenant une interface fluide et responsive.",
-    learned: "Ce projet m'a permis d'approfondir mes connaissances en programmation C, notamment la gestion de la mémoire et les structures de données."
+    technologies: ["C", "Doxygen"],
+    challenges: "Le principal défi était de gérer les collisions en temps réel dans le terminal contre les murs ou les pavées.",
+    learned: "Ce projet m'a permis d'approfondir mes connaissances en programmation C, notamment la gestion des tableaux à double dimension."
   },
   docker: {
     title: "Installation d'un Poste de Développement",
     image: "./images/docker.png",
-    description: "Automatisation complète de l'installation et configuration d'un environnement de développement using Docker et des scripts personnalisés.",
+    description: "Automatisation complète de l'installation et configuration d'un environnement de traitement de fichier en utilisant Docker et des scripts personnalisés.",
     details: [
       "Scripts Bash pour l'automatisation des installations",
       "Containers Docker pour isoler les environnements",
       "Scripts PHP pour le traitement de fichiers",
-      "Configuration automatique des outils de développement",
+      "Configuration automatique des outils de traitement",
       "Documentation complète du processus"
     ],
-    technologies: ["Docker", "Bash", "PHP", "Linux"],
+    technologies: ["Docker", "Bash", "PHP"],
     challenges: "L'harmonisation des différents environnements et la gestion des dépendances entre les containers constituaient les principaux défis.",
     learned: "J'ai acquis une solide compréhension de la containerisation et de l'automatisation des processus de déploiement."
   },
@@ -36,8 +35,8 @@ const projectsData = {
     description: "Développement d'un site web complet pour les Jeux Olympiques basé sur un cahier des charges client détaillé.",
     details: [
       "Design responsive adapté à tous les écrans",
-      "Structure HTML5 sémantique",
-      "Styles CSS3 modernes avec animations",
+      "Structure HTML organisée",
+      "Styles CSS modernes avec animations",
       "Navigation fluide et intuitive",
       "Respect des standards d'accessibilité"
     ],
@@ -50,14 +49,14 @@ const projectsData = {
     image: "./images/EllaDanse.jpg",
     description: "Application de gestion complète développée en Java pour une association de danse, incluant la gestion des membres et des cours.",
     details: [
-      "Interface graphique intuitive avec Swing",
+      "Interface graphique intuitive avec IntelliJ Idea",
+      "Création des fenêtres avec JavaFX Scene Builder",
       "Gestion des adhérents et professeurs",
       "Planification des cours et événements",
-      "Système de facturation intégré",
-      "Sauvegarde des données en local"
+      "Système de facturation intégré"
     ],
-    technologies: ["Java", "Swing", "MVC", "File I/O"],
-    challenges: "Concevoir une architecture logicielle robuste et une interface utilisateur ergonomique pour des utilisateurs non techniques.",
+    technologies: ["Java", "IntelliJ Idea", "JavaFX Scene Builder"],
+    challenges: "Concevoir une architecture logicielle et une interface utilisateur ergonomique pour des utilisateurs non techniques.",
     learned: "J'ai développé mes compétences en programmation orientée objet et en conception d'interfaces utilisateur."
   },
   reseau: {
@@ -71,7 +70,7 @@ const projectsData = {
       "Sécurisation des accès et des données",
       "Interface d'administration"
     ],
-    technologies: ["Apache", "PHP", "MySQL", "Linux", "SSL"],
+    technologies: ["Apache", "PHP", "MySQL"],
     challenges: "Assurer la sécurité du système tout en maintenant des performances optimales et une maintenance facile.",
     learned: "J'ai acquis une compréhension approfondie de l'administration système et de la sécurité web."
   },
@@ -86,7 +85,7 @@ const projectsData = {
       "Requêtes SQL complexes d'exploitation",
       "Optimisation des performances"
     ],
-    technologies: ["SQL", "MySQL", "UML", "CSV", "Merise"],
+    technologies: ["SQL", "SQL-Workbench", "UML", "CSV"],
     challenges: "Concevoir un modèle de données normalisé et efficace, puis optimiser les requêtes pour de gros volumes de données.",
     learned: "Ce projet m'a permis de maîtriser la conception de bases de données et l'écriture de requêtes SQL avancées."
   }
