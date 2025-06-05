@@ -476,7 +476,6 @@ footer {
 .panel-details h4 {
   background: var(--primary-gradient);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -521,6 +520,7 @@ footer {
   box-shadow: var(--shadow-light);
   transition: var(--transition);
   border: 2px solid transparent;
+  text-decoration: none;
 }
 
 .tech-tag:hover {

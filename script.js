@@ -11,6 +11,7 @@ const projectsData = {
       "Code structuré et modulaire en C"
     ],
     technologies: ["C", "Doxygen"],
+    competences: ["UE1", "UE2"],
     challenges: "Le principal défi était de gérer les collisions en temps réel dans le terminal contre les murs ou les pavées.",
     learned: "Ce projet m'a permis d'approfondir mes connaissances en programmation C, notamment la gestion des tableaux à double dimension."
   },
@@ -26,6 +27,7 @@ const projectsData = {
       "Documentation complète du processus"
     ],
     technologies: ["Docker", "Bash", "PHP"],
+    competences: ["UE3"],
     challenges: "L'harmonisation des différents environnements et la gestion des dépendances entre les containers constituaient les principaux défis.",
     learned: "J'ai acquis une solide compréhension de la containerisation et de l'automatisation des processus de déploiement."
   },
@@ -41,6 +43,7 @@ const projectsData = {
       "Respect des standards d'accessibilité"
     ],
     technologies: ["HTML5", "CSS3", "Responsive Design"],
+    competences: ["UE5"],
     challenges: "Créer un design attrayant tout en respectant les contraintes du cahier des charges et en assurant une excellente expérience utilisateur.",
     learned: "Ce projet m'a permis de maîtriser les techniques avancées de CSS et l'importance de l'analyse des besoins client."
   },
@@ -56,6 +59,7 @@ const projectsData = {
       "Système de facturation intégré"
     ],
     technologies: ["Java", "IntelliJ Idea", "JavaFX Scene Builder"],
+    competences: ["UE1"],
     challenges: "Concevoir une architecture logicielle et une interface utilisateur ergonomique pour des utilisateurs non techniques.",
     learned: "J'ai développé mes compétences en programmation orientée objet et en conception d'interfaces utilisateur."
   },
@@ -71,6 +75,7 @@ const projectsData = {
       "Interface d'administration"
     ],
     technologies: ["Apache", "PHP", "MySQL"],
+    competences: ["UE3"],
     challenges: "Assurer la sécurité du système tout en maintenant des performances optimales et une maintenance facile.",
     learned: "J'ai acquis une compréhension approfondie de l'administration système et de la sécurité web."
   },
@@ -86,6 +91,7 @@ const projectsData = {
       "Optimisation des performances"
     ],
     technologies: ["SQL", "SQL-Workbench", "UML", "CSV"],
+    competences: ["UE4"],
     challenges: "Concevoir un modèle de données normalisé et efficace, puis optimiser les requêtes pour de gros volumes de données.",
     learned: "Ce projet m'a permis de maîtriser la conception de bases de données et l'écriture de requêtes SQL avancées."
   }
@@ -135,6 +141,13 @@ function openPanel(projectKey) {
         <div class="panel-details">
           <h4>📚 Apprentissages</h4>
           <p>${project.learned}</p>
+        </div>
+
+        <div class="panel-details">
+          <h4>🧠 Compétences</h4>
+          <div class="tech-tags">
+            ${project.competences.map(competence => `<a href="#${competence}" class="tech-tag">${competence}</a>`).join('')}
+          </div>
         </div>
       `;
 
@@ -190,15 +203,28 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // Navigation fluide
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
+document.addEventListener('click', function (e) {
+  const anchor = e.target.closest('a[href^="#"]');
+  if (!anchor) return;
+
+  const targetId = anchor.getAttribute('href');
+  const target = document.querySelector(targetId);
+  if (!target) return;
+
+  e.preventDefault();
+
+  // Fermer le panneau si le lien est dedans
+  if (anchor.closest('.project-panel')) {
+    closePanel();
+  }
+
+  // Scroll avec compensation du header
+  const headerOffset = document.querySelector('header').offsetHeight;
+  const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+  const offsetPosition = elementPosition - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
   });
 });
